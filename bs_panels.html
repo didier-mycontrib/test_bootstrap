@@ -1,7 +1,8 @@
 <html>
 <head>
 <title>panels</title>
-	
+	<script src="js/jquery-2.2.1.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/styles.css">
 
@@ -57,5 +58,51 @@
        </div>
 	</div>
   </div>
+  
+  <h3> collapse / collapsible panel </h3>
+  
+   <a href="#id_divXy" data-toggle="collapse">toggle collapse div of id_divXy</a> <button data-toggle="collapse" data-target="#id_divXy">toggle collapse div with button</button>
+	<div id="id_divXy" class="collapse">
+	collaspible div with id
+	</div>
+	<hr/>
+	<br/>
+	 <div class="panel-group">
+	  <div class="panel panel-primary">
+		<div class="panel-heading">
+		  <h4 class="panel-title">
+			<a data-toggle="collapse" href="#collapse1">Collapsible panel (when click on title)</a>
+		  </h4>
+		</div>
+		<div id="collapse1" class="panel-collapse collapse">
+		  <div class="panel-body">Panel Body</div>
+		  <!-- <div class="panel-footer">Panel Footer</div> -->
+		</div>
+	  </div>
+	</div>
+	<hr/>
+	 <h3> accordion (exclusive collapse) with same data-parent </h3>
+  
+  
+	<br/>
+	 <div class="panel-group" id="season_accordion">
+	  <div class="panel panel-info">
+		<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#hiver" data-parent="#season_accordion">hiver</a></h4></div>
+		<div id="hiver" class="panel-collapse collapse in"> <div class="panel-body">ski neige</div></div>
+	  </div>
+	   <div class="panel panel-info">
+		<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#printemps" data-parent="#season_accordion">printemps</a></h4></div>
+		<div id="printemps" class="panel-collapse collapse"> <div class="panel-body">fleur</div></div>
+	  </div>
+	   <div class="panel panel-info">
+		<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#ete" data-parent="#season_accordion">ete</a></h4></div>
+		<div id="ete" class="panel-collapse collapse"> <div class="panel-body">soleil plage</div></div>
+	  </div>
+	   <div class="panel panel-info">
+		<div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#automne" data-parent="#season_accordion">automne</a></h4></div>
+		<div id="automne" class="panel-collapse collapse"> <div class="panel-body">feuilles</div></div>
+	  </div>
+	</div>
+  
 </body>
 </html>

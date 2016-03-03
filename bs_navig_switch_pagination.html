@@ -1,13 +1,27 @@
 <html>
 <head>
 <title>navigation</title>
-	
+	<script src="js/jquery-2.2.1.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/styles.css">
 
 </head>
 <body>
   <h1> navigation , ...</h1>
+   <h3> dropdown menu</h3>
+ <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+	<li class="divider"></li> <!-- separation -->
+    <li class="disabled"><a href="#">JavaScript</a></li> <!-- class="disabled" si temporairement inactif -->
+  </ul>
+</div>
+
+  <h3> nav-tabs , nav-pills</h3>
   <br/>
   <p> &lt;ul class="nav nav-tabs" &gt; incluant  </p>
   <p> &lt;li&gt;&lt;a href="#" &gt; onglet_n &lt;/a&gt; &lt;/li&gt; pour chaque titre d'onglet </p>

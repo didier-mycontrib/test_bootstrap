@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>bootstrap highlight</title>
+	<script src="js/jquery-2.2.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	
+	<script>
+
+    </script>
+
+</head>
+<body>
+  <h3> badge (indicateur dans rond) et label (dans rectangle arrondi) </h3>
+   <a href="#">News link with sub span/.badge<span class="badge">5</span></a><br/>
+   <a href="#">Updates link with sub span/.badge<span class="badge">2</span></a> <br/>
+   <br/>
+   <p><span class="badge">a</span> texte1 qui va bien avec span/.badge</p>
+   <p><span class="badge">b</span> texte2 qui va bien avec span/.badge</p>
+   <br/>
+   <button type="button" class="btn btn-primary">primary button with sub span/.badge <span class="badge">7</span></button>
+   <br/>
+   <br/>
+   <p> texte1 qui va bien avec span/.label .label-info <span class="label label-info">nouveau</span></p>
+   <p> texte2 qui va bien avec span/.label .label-info <span class="label label-info">en promo</span></p>
+   
+   variantes de label:
+    <span class="label label-default">label-default</span>
+	<span class="label label-primary">label-primary</span>
+	<span class="label label-success">label-success</span>
+	<span class="label label-info">label-info</span>
+	<span class="label label-warning">label-warning</span>
+	<span class="label label-danger">label-danger</span>
+  
+   <hr/>
+   <h3> effets sur images (.img-rounded , .img-circle , .img-thumbnail , .img-responsive)</h3>
+    <img src="images/paris.jpg" class="img-rounded" alt="paris" width="150" height="100" />
+	<img src="images/sanfran.jpg" class="img-circle" alt="sanfransico" width="150" height="100" />
+	<img src="images/newyork.jpg" class="img-thumbnail" alt="newyork" width="150" height="100" />
+	<div class="row">
+	   <div class="col-xs-offset-1 col-xs-2">
+	      <img src="images/paris.jpg" class="img-responsive" alt="paris" /><br/>
+		  (responsive)
+		</div>
+	</div>
+  <hr/>
+  <h3> div/.well (encradrement) </h3>
+    
+	<div class="well">encadrement avec bordure arrondie , padding et fond grise par defaut <br/>
+	taille moyenne par defaut , classes complementaires well-sm et well-lg </div>
+	<div class="container">
+	    <div class="well">div/.well inside div/.container</div>
+	</div>
+	
+	 <p>This is some text (outside jumbotron).</p>
+	 
+ <hr/>	 
+	<h3> jumbotron (sorte de well avec grossissement relatif) </h3>
+
+	<div class="jumbotron">
+     ...
+    <p>texte (grossi) dans jumbotron</p>
+	...
+  </div>
+  <p>This is some text (outside jumbotron).</p>
+	
+</body>
+</html>
