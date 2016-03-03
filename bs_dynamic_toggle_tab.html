@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>dynamic toggle tab</title>
+	<script src="js/jquery-2.2.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+
+  <h3> bootstrap tabs or pill(with automatic switch)</h3>
+  <p> Attention: l'aspect dynamique du switch d'onglet necessite les librairies
+  <b>jquery.js</b> et <b>bootstrap.js</b></p>
+  <br/>
+  <p> &lt;ul class="nav nav-tabs" &gt; incluant  </p>
+  <p> &lt;li&gt; <b>&lt;a href="#<font color='blue'>id_tabXy</font>" <font color='red'>data-toggle="tab"</font> &gt; </b>onglet_n <b>&lt;/a&gt;</b> &lt;/li&gt; pour chaque titre d'onglet </p>
+  <p> le &lt;li&gt; de l'onglet par defaut comportera idealement class="active" </p>
+  <hr/>
+  <p> Plus bas, un bloc &lt;div <font color='red'>class="tab-content"</font>&gt; ... &lt;div&gt;   
+      comportera un bloc div pour chaque contenu d'onglet </p>
+  <p> chaque corps/contenu d'onglet sera structure par un bloc div de classe .tab-pane </p>
+  <p> &lt;div id="<font color='blue'>id_tabXy</font>" class="<font color='red'>tab-pane</font> fade"&gt;contenu onglet Xy&lt;/div&gt; </p>  
+  <p> la classe "fade" conseillee permet d'obtenir un effet de transition </p>
+  <p> Le bloc &lt;div&gt; correspondant au contenu de l'onglet par defaut aura idealement les 
+      classes de styles complementaires "in active" </p>
+  <br/>	  
+	  
+     <ul class="nav nav-tabs">
+	   <li class="active"><a href="#id_tab1" data-toggle="tab">onglet_1</a></li>
+	   <li><a href="#id_tab2" data-toggle="tab">onglet_2</a></li>
+	   <li><a href="#id_tab3" data-toggle="tab">onglet_3</a></li>
+	</ul>
+		
+	<div class="tab-content">
+	   <div id="id_tab1" class="tab-pane fade in active">
+	      contenu onglet 1
+	   </div>
+	   <div id="id_tab2" class="tab-pane fade">
+	      contenu onglet 2
+	   </div>
+	   <div id="id_tab3" class="tab-pane fade">
+	      contenu onglet 3
+	   </div>
+	</div>
+	<br/>
+</body>
+</html>
