@@ -18,22 +18,22 @@ $(document).ready(function(){
 </head>
 <body>
   <h3> buttons </h3>
-    <button class="btn-default">btn-default</button>
-    <button class="btn-primary">btn-primary</button> 
-	<button class="btn-success">btn-success</button> 
-	<button class="btn-info">btn-info</button> 
-	<button class="btn-warning">btn-warning</button> 
-	<button class="btn-danger">btn-danger</button> 
+    <button class="btn btn-default">btn btn-default</button>
+    <button class="btn btn-primary">btn btn-primary</button> 
+	<button class="btn btn-success">btn-success</button> 
+	<button class="btn btn-info">btn btn-info</button> 
+	<button class="btn btn-warning">btn btn-warning</button> 
+	<button class="btn btn-danger">btn btn-danger</button> 
 	<br/><br/>
-	<button class="btn-primary btn-xs">btn-xs</button>
-	<button class="btn-primary btn-sm">btn-sm</button>
-	<!-- <button class="btn-primary btn-md">btn-md</button> -->
-	<button class="btn-primary btn-lg">btn-lg</button>
+	<button class="btn btn-primary btn-xs">btn btn-xs</button>
+	<button class="btn btn-primary btn-sm">btn btn-sm</button>
+	<button class="btn btn-primary">btn default/standard/medium</button>
+	<button class="btn btn-primary btn-lg">btn btn-lg</button>
 	<br/><br/>
-	<button class="btn-primary btn-block">btn-block (toute largeur du parent)</button>
+	<button class="btn btn-primary btn-block">btn-block (toute largeur du parent)</button>
 	<br/>
-	<button class="btn-primary active">active (marked as pressed)</button> 
-    <button class="btn-primary disabled">disabled (marked as unclickable)</button> 
+	<button class="btn btn-primary active">active (marked as pressed)</button> 
+    <button class="btn btn-primary disabled">disabled (marked as unclickable)</button> 
 
     <h5> series of buttons in div/.btn-group </h5>
 		 <div class="btn-group">
@@ -47,7 +47,20 @@ $(document).ready(function(){
 		  <button type="button" class="btn btn-primary">b2</button>
 		  <button type="button" class="btn btn-primary">b3</button>
 		</div>
+	<h5> toolbar ( plusieurs div/.btn-group dans div/.btn-toolbar ) </h5>
 	
+	<div class="btn-toolbar">
+	  <div class="btn-group">
+		  <a class="btn btn-danger" href="#">1</a>
+		  <a class="btn btn-info" href="#">2</a>
+		  <a class="btn btn-warning" href="#">3</a>
+	  </div>
+	  <div class="btn-group">
+		  <a class="btn btn-danger" href="#">4</a>
+		  <a class="btn btn-info" href="#">5</a>
+		  <a class="btn btn-warning" href="#">6</a>
+	  </div>
+	</div>
 	
 	<h3> tooltip </h3>
 

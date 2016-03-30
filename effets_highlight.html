@@ -5,7 +5,13 @@
 	<script src="js/bootstrap.js"></script>
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/styles.css">
-	
+	<style>
+	.my-round-btn {
+		width: 40px;
+		height: 40px;
+		border-radius: 20px;
+	}
+	</style>
 	<script>
 
     </script>
@@ -43,6 +49,12 @@ Print icon on a styled link button:
     <span class="glyphicon glyphicon-print"/> Print
   </a>
 </p> 
+
+<h5> boutons ronds avec glyphicon (border-radius css attribute in my-round-btn custom class)</h5>
+<button class="btn btn-primary my-round-btn"><span class="glyphicon glyphicon-user"></span></button>
+<button class="btn btn-default my-round-btn">
+    <span class="glyphicon glyphicon-shopping-cart" style="color:green"/>
+</button>
 
  <hr/>
   <h3> badge (indicateur dans rond) et label (dans rectangle arrondi) </h3>
