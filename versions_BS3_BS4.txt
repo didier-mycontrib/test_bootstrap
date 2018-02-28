@@ -1,0 +1,6 @@
+BS3 (bootstrap 3.x) est compatible avec jquery 2.x
+----
+BS4 (bootstrap 4) depuis 2018 peut éventuellement être utilisé avec jquery 3.x et n'est plus livré avec gliphicons
+il vaut mieux utiliser font-awesome (open-source, gratuit) pour accompagner BS4 .
+----
+pure-css est un concurrent "light" de bootstrap

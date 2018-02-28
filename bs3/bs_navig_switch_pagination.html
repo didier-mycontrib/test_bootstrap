@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>navigation</title>
+	<script src="js/jquery-2.2.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/styles.css">
+    <script>
+	   function showActiveSelection(jqA){
+		   if(jqA == undefined) return;
+		   var jqParentLi = jqA.parent();
+		   if(jqParentLi == undefined) return;
+		   jqParentLi.addClass('active');
+		   jqParentLi.siblings().removeClass('active');
+	   }
+	  
+	   $(function() { //liste de gestionnaire d'événements via "jquery"
+	   
+	     $('a').on('click',function(evt){
+		     showActiveSelection($(evt.target));
+		     var txt = $(evt.target).text();			 
+			 if(txt != undefined)
+		        $('#variant-content').text('texte generic pour un click sur ' + txt);
+		 })
+	     
+         $('#a_html').click(function() {
+           //$('#variant-content').collapse('toggle');
+		   $('#variant-content').text('texte qui va bien pour HTML');
+          });
+		  
+		  $('#a_css').click(function() {
+		   $('#variant-content').text('texte qui va bien pour CSS');
+          });
+		  
+		  //shown.bs.dropdown , hidden.bs.dropdown , ...
+		  $('#dropdown1').on('shown.bs.dropdown', function () {
+		    //alert('menu dropdown1 visible');
+			// Je fais un truc quand le menu est devenu visible
+		  });
+		  
+       });
+	</script>
+</head>
+<body>
+  <h1> navigation , ...</h1>
+   <div class="panel panel-info">
+		<div class="panel-heading">
+		  <h4 class="panel-title"> panel avec contenu variable (selon navigation) </h4>
+		</div>
+		<div id="variant-content" class="panel-collapse collapse in">
+		  <div class="panel-body">... selon gestion des events avec jquery ...</div>
+		</div>
+	  </div>
+   <h3> dropdown menu</h3>
+ <div class="dropdown" id="dropdown1">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a id="a_html" href="#">HTML</a></li>
+    <li><a id="a_css" href="#">CSS</a></li>
+	<li class="divider"></li> <!-- separation -->
+    <li class="disabled"><a href="#">JavaScript</a></li> <!-- class="disabled" si temporairement inactif -->
+  </ul>
+</div>
+
+  <h3> nav-tabs , nav-pills</h3>
+  <br/>
+  <p> &lt;ul class="nav nav-tabs" &gt; incluant  </p>
+  <p> &lt;li&gt;&lt;a href="#" &gt; onglet_n &lt;/a&gt; &lt;/li&gt; pour chaque titre d'onglet </p>
+  <p> le &lt;li&gt; de l'onglet par defaut comportera idealement class="active" </p>
+    <ul class="nav nav-tabs">
+	   <li class="active"><a href="#">onglet_1</a></li>
+	   <li><a href="#">onglet_2</a></li>
+	   <li><a href="#">onglet_3</a></li>
+	</ul>
+	<br/>
+	<p> variante avec nav-pills au lieu de nav-tabs : </p>
+    <ul class="nav nav-pills">
+	   <li class="active"><a href="#">onglet_1</a></li>
+	   <li><a href="#">onglet_2</a></li>
+	   <li><a href="#">onglet_3</a></li>
+	</ul>
+	
+	<br/>
+	<p> variante avec nav-stacked en plus pour une version verticale : </p>
+    <ul class="nav nav-pills nav-stacked">
+	   <li class="active"><a href="#">onglet_1</a></li>
+	   <li><a href="#">onglet_2</a></li>
+	   <li><a href="#">onglet_3</a></li>
+	</ul>
+	<hr/>
+	
+</body>
+</html>

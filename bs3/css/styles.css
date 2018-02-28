@@ -1,0 +1,30 @@
+p { font-size: 12pt ; }
+
+.c1 {
+  background-color: #A9A9A9; /* light grey */
+}
+
+.wb {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.c2{
+  background-color:  #a94442; /* red */
+  font-family: courier;
+  font-size : 1.8vw; /* vw = viewport width = unité équivalent à 1% de la largeur de la fenêtre */                     
+  
+}
+
+.c3 {
+  background-color: #42A948; /* green */
+}
+
+.c4{
+  background-color:  #4442c9; /* blue */
+}
+
+.c5{
+  background-color:  yellow;
+}
