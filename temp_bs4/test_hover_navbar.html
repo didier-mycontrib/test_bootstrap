@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>bootstrap 4 navbar hover</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script> 
+</head>
+<body>
+<div class="container-fluid">
+
+<!-- navbar-expand-sm et navbar-dark bg-primary ou navbar-dark bg-dark
+    ou navbar-expand-md navbar-no-bg
+     ou navbar-custom ou navbar-inverse ou ...	--> 
+<nav class="navbar navbar-expand-sm navbar-inverse">
+
+<button class="navbar-toggler" type="button" 
+data-toggle="collapse" data-target="#nav-content" 
+aria-controls="nav-content" aria-expanded="false" 
+aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<!-- Brand -->
+<a class="navbar-brand" href="#">My Responsive web site</a>
+
+<!-- Links -->
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+	  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link 2
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+          <a class="dropdown-item" href="#">Action 2</a>
+          <a class="dropdown-item" href="#">Another action 2</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+</body>
+</html>

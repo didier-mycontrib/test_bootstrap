@@ -1,0 +1,13 @@
+@import "vendors/bootstrap/bootstrap";
+
+#contentXx {
+    color:green;
+    @include media-breakpoint-up('md') {
+        font-size:100%;
+		color:blue;
+    }
+    @include media-breakpoint-up('lg') {
+        font-size:110%;
+		color:red;
+    }
+}
