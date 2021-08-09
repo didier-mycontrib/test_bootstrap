@@ -1,46 +1,55 @@
 <html>
 <head>
 <title>navigation</title>
-	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.bundle.js"></script>
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/styles.css">
     <script>
-	   function showActiveSelection(jqA){
-		   if(jqA == undefined) return;
-		   jqA.addClass('active');
-		   var jqParentLi = jqA.parent();
-		   if(jqParentLi == undefined) return;
-		   jqParentLi.siblings().each( function(index,elt){
-                  $(elt).find('a').removeClass('active');
-			   });
-	   }
+	   function showActiveSelection(link){
+		   if(link == undefined) return;
+		   link.classList.add('active');
+		   var parentLi = link.parentElement;
+		   if(parentLi == undefined) return;
+		   let nextSibling = parentLi.nextElementSibling;
+		   while(nextSibling) {
+				let eltA = nextSibling.querySelector('a');
+				//console.log("eltA="+eltA.innerText);
+				if(eltA) eltA.classList.remove('active');
+				nextSibling = nextSibling.nextElementSibling;
+	           }
+		   let prevSibling = parentLi.previousElementSibling;
+		   while(prevSibling) {
+				let eltA = prevSibling.querySelector('a');
+				if(eltA) eltA.classList.remove('active');
+				prevSibling = prevSibling.previousElementSibling;
+	           }
+	      }
 	  
-	   $(function() { //liste de gestionnaire d'événements via "jquery"
-	   
-	     $('a').on('click',function(evt){
-		     showActiveSelection($(evt.target));
-		     var txt = $(evt.target).text();			 
+	   window.onload= function() { 
+	     var linkList = [].slice.call(document.querySelectorAll('a'));
+	     linkList.map( ( link )=> { link.addEventListener('click',function(evt){
+		     showActiveSelection(evt.target);
+		     var txt = evt.target.innerText;			 
 			 if(txt != undefined)
-		        $('#variant-content').text('texte generic pour un click sur ' + txt);
+		        document.querySelector('#variant-content').innerText='texte generic pour un click sur ' + txt;
+		    })
 		 })
 	     
-         $('#a_html').click(function() {
-           //$('#variant-content').collapse('toggle');
-		   $('#variant-content').text('texte qui va bien pour HTML');
+         document.querySelector('#a_html').addEventListener('click',function() {
+		   document.querySelector('#variant-content').innerText='texte qui va bien pour HTML';
           });
 		  
-		  $('#a_css').click(function() {
-		   $('#variant-content').text('texte qui va bien pour CSS');
+		  document.querySelector('#a_css').addEventListener('click',function() {
+		   document.querySelector('#variant-content').innerText='texte qui va bien pour CSS';
           });
 		  
 		  //shown.bs.dropdown , hidden.bs.dropdown , ...
-		  $('#dropdown1').on('shown.bs.dropdown', function () {
-		    //alert('menu dropdown1 visible');
+		  document.querySelector('#dropdown1').addEventListener('shown.bs.dropdown', function () {
+		    alert('menu dropdown1 visible');
 			// Je fais un truc quand le menu est devenu visible
 		  });
 		  
-       });
+       }
 	</script>
 </head>
 <body>

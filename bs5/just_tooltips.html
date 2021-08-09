@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>just tooltips</title>
+	<!-- <script src="js/bootstrap.min.js"></script> -->
+	<script src="js/bootstrap.bundle.min.js"></script> <!-- including popper.js , ... -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	
+	<script>
+window.onload = function(){
+    //initilisation indispensable permettant d'activer la fonctionnalité "tooltip":
+	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		return new bootstrap.Tooltip(tooltipTriggerEl)
+	})
+}
+</script>
+
+</head>
+<body>
+  
+	<h3> tooltip </h3>
+	<div class="container-fluid" >
+		<button type="button" class="btn btn-secondary" 
+		data-bs-toggle="tooltip" 
+		data-bs-placement="top" title="Tooltip text">
+			Toggle tooltip (when mouseover)
+		</button>
+	<div>
+  
+		
+</body>
+</html>
